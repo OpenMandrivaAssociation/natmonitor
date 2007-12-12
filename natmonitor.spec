@@ -1,6 +1,6 @@
 %define	name	natmonitor
 %define	version	2.4
-%define	release	3mdk
+%define	release	%mkrel 3
 
 Summary:	This little utility monitor hosts bandwidth usage in your home lan
 Name:		%{name}
