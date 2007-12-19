@@ -59,7 +59,6 @@ install -d %{buildroot}%{_bindir}
 install -d %{buildroot}%{_sbindir}
 install -d %{buildroot}%{_localstatedir}/natmonitor
 
-install -d %{buildroot}%{_menudir}
 install -d %{buildroot}%{_miconsdir}
 install -d %{buildroot}%{_iconsdir}
 install -d %{buildroot}%{_liconsdir}
@@ -76,14 +75,15 @@ install -m755 natmonitord.init %{buildroot}%{_initrddir}/natmonitord
 install -m644 natmonitor.conf %{buildroot}%{_sysconfdir}
 install -m644 natmonitord.conf %{buildroot}%{_sysconfdir}
 
-cat > %{buildroot}%{_menudir}/%{name} <<EOF
-?package(%{name}): \
-command="%{name}" \
-title="Natmonitor " \
-longtitle="This little utility monitor hosts bandwidth usage in your home lan." \
-needs="x11" \
-icon="%{name}.png" \
-section="System/Monitoring"
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications/
+cat << EOF > %buildroot%{_datadir}/applications/mandriva-%{name}.desktop
+[Desktop Entry]
+Type=Application
+Exec=%{name}
+Name=Natmonitor 
+Comment=Utility to monitor hosts bandwidth usage in your home lan
+Icon=%{name}
+Categories=System;Monitor;
 EOF
 
 %post
@@ -113,7 +113,7 @@ EOF
 %attr(0644,root,root) %config(noreplace) %{_sysconfdir}/natmonitor.conf
 %attr(0755,root,root) %{_bindir}/natmonitor
 %attr(0755,root,root) %{_bindir}/natmonitorconsole
-%{_menudir}/%{name}
+%{_datadir}/applications/mandriva-%{name}.desktop
 %{_miconsdir}/%{name}.png
 %{_iconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
