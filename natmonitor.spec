@@ -15,6 +15,7 @@ Patch0:		natmonitor-datadir.patch.bz2
 Patch1:		natmonitord-conf.patch.bz2
 BuildRequires:	gtk+2-devel
 BuildRequires:	libpcap-devel >= 0.7.2
+BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 
 %description
 NAT Monitor is a tool to monitor hosts' bandwidth usage in a 
