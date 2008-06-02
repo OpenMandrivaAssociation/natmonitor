@@ -58,7 +58,7 @@ install -d %{buildroot}%{_sysconfdir}
 install -d %{buildroot}%{_initrddir}
 install -d %{buildroot}%{_bindir}
 install -d %{buildroot}%{_sbindir}
-install -d %{buildroot}%{_localstatedir}/natmonitor
+install -d %{buildroot}%{_localstatedir}/lib/natmonitor
 
 install -d %{buildroot}%{_miconsdir}
 install -d %{buildroot}%{_iconsdir}
@@ -124,5 +124,5 @@ EOF
 %attr(0755,root,root) %{_initrddir}/natmonitord
 %attr(0644,root,root) %config(noreplace) %{_sysconfdir}/natmonitord.conf
 %attr(0755,root,root) %{_sbindir}/natmonitord
-%attr(0755,natmonitor,natmonitor) %dir %{_localstatedir}/natmonitor
+%attr(0755,natmonitor,natmonitor) %dir %{_localstatedir}/lib/natmonitor
 
