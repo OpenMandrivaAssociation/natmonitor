@@ -87,11 +87,15 @@ Icon=%{name}
 Categories=System;Monitor;
 EOF
 
+%if %mdkversion < 200900
 %post
 %update_menus
+%endif
 
+%if %mdkversion < 200900
 %postun
 %clean_menus
+%endif
 
 %pre -n natmonitord
 %_pre_useradd natmonitor /var/lib/natmonitor /bin/false
