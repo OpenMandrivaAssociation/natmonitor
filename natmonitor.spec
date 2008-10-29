@@ -1,6 +1,6 @@
 %define	name	natmonitor
 %define	version	2.4
-%define	release	%mkrel 5
+%define	release	%mkrel 6
 
 Summary:	This little utility monitor hosts bandwidth usage in your home lan
 Name:		%{name}
@@ -15,7 +15,7 @@ Patch0:		natmonitor-datadir.patch.bz2
 Patch1:		natmonitord-conf.patch.bz2
 BuildRequires:	gtk+2-devel
 BuildRequires:	libpcap-devel >= 0.7.2
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 NAT Monitor is a tool to monitor hosts' bandwidth usage in a 
