@@ -1,3 +1,5 @@
 sources:
-  "natmonitor-2.4.tar.bz2:"	dc7d874d004841cbef9ab05621307f49eaba3d1c
-  "natmonitord.init.bz2:"	e644adc18c39e0f207f15982ed43591bf235d7bd
+  "natmonitor-2.4.tar.bz2": dc7d874d004841cbef9ab05621307f49eaba3d1c
+  "natmonitor-datadir.patch.bz2": 15dce1736a5963df3d2029af760f9d6879c80da7
+  "natmonitord-conf.patch.bz2": 7fcf0d54d9df2dab1c20d9d5ed2bcc766229686f
+  "natmonitord.init.bz2": e644adc18c39e0f207f15982ed43591bf235d7bd

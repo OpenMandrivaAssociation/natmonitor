@@ -1,6 +1,6 @@
 %define	name	natmonitor
 %define	version	2.4
-%define	release	%mkrel 7
+%define	release	%mkrel 6
 
 Summary:	This little utility monitor hosts bandwidth usage in your home lan
 Name:		%{name}
@@ -130,3 +130,58 @@ EOF
 %attr(0755,root,root) %{_sbindir}/natmonitord
 %attr(0755,natmonitor,natmonitor) %dir %{_localstatedir}/lib/natmonitor
 
+
+
+%changelog
+* Wed Oct 29 2008 Oden Eriksson <oeriksson@mandriva.com> 2.4-6mdv2009.1
++ Revision: 298288
+- rebuilt against libpcap-1.0.0
+
+* Tue Jul 29 2008 Thierry Vignaud <tvignaud@mandriva.com> 2.4-5mdv2009.0
++ Revision: 253570
+- rebuild
+
+  + Pixel <pixel@mandriva.com>
+    - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+    - adapt to %%_localstatedir now being /var instead of /var/lib (#22312)
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Wed Dec 19 2007 Thierry Vignaud <tvignaud@mandriva.com> 2.4-3mdv2008.1
++ Revision: 133911
+- auto-convert XDG menu entry
+- kill re-definition of %%buildroot on Pixel's request
+- use %%mkrel
+- import natmonitor
+
+
+* Wed Jul 13 2005 Oden Eriksson <oeriksson@mandriva.com> 2.4-3mdk
+- rebuilt against new libpcap-0.9.1 (aka. a "play safe" rebuild)
+
+* Mon Jul 04 2005 Oden Eriksson <oeriksson@mandriva.com> 2.4-2mdk
+- rebuild
+- misc spec file fixes
+
+* Fri Jun 04 2004 Oden Eriksson <oeriksson@mandrakesoft.com> 2.4-1mdk
+- 2.4
+- fix deps
+- fix menu entry
+
+* Sun May 11 2003 Oden Eriksson <oden.eriksson@kvikkjokk.net> 2.1-1mdk
+- 2.1
+- added P0, P1 & S1
+- added the natmonitord sub package
+
+* Tue Apr 22 2003 Oden Eriksson <oden.eriksson@kvikkjokk.net> 1.1-1mdk
+- 1.1
+- drop P0, this software doesn't seem to like cflags at all (i wonder why???)
+
+* Tue Apr 15 2003 Oden Eriksson <oden.eriksson@kvikkjokk.net> 0.9-1mdk
+- 0.9
+- fix P0
+- install icons and menu stuff (i hope this is correct?)
+
+* Tue Apr 08 2003 Oden Eriksson <oden.eriksson@kvikkjokk.net> 0.7-1mdk
+- initial cooker contrib
+- added P0
