@@ -1,0 +1,18 @@
+[Unit]
+Description=This shell script takes care of starting and stopping natmonitord
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/echo -n "Starting natmonitord: "
+ExecStart=/usr/sbin/natmonitord & >/dev/null 2>/dev/null 
+ExecStart=/bin/echo
+ExecStart=/bin/touch /var/lock/subsys/natmonitord
+
+ExecStop=/bin/echo -n "Stopping natmonitord: "
+ExecStop=/bin/killproc natmonitord
+ExecStop=/bin/echo
+ExecStop=/bin/rm -f /var/lock/subsys/natmonitord
+
+[Install]
+WantedBy=multi-user.target
