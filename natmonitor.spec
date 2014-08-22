@@ -9,7 +9,7 @@ Source0:	http://prdownloads.sourceforge.net/natmonitor/%{name}-%{version}.tar.bz
 Source1:	natmonitord.service
 Patch0:		natmonitor-datadir.patch.bz2
 Patch1:		natmonitord-conf.patch.bz2
-BuildRequires:	gtk+2-devel
+BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	libpcap-devel >= 0.7.2
 BuildRequires: systemd
 Requires(pre): systemd
