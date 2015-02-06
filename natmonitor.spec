@@ -1,7 +1,7 @@
 Summary:	This little utility monitor hosts bandwidth usage in your home lan
 Name:		natmonitor
 Version:	2.4
-Release:	7
+Release:	8
 Group:		Monitoring
 License:	GPL
 URL:		http://natmonitor.sourceforge.net/
