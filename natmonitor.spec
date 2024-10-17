@@ -4,7 +4,7 @@ Version:	2.4
 Release:	8
 Group:		Monitoring
 License:	GPL
-URL:		http://natmonitor.sourceforge.net/
+URL:		https://natmonitor.sourceforge.net/
 Source0:	http://prdownloads.sourceforge.net/natmonitor/%{name}-%{version}.tar.bz2
 Source1:	natmonitord.service
 Patch0:		natmonitor-datadir.patch.bz2
